@@ -1,0 +1,6 @@
+INSERT INTO videos (title, synopsis, director, cast, release_year, genre, running_time, is_deleted) VALUES
+('Inception', 'A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.', 'Christopher Nolan', 'Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page', 2010, 'Science Fiction', 148, FALSE),
+('The Shawshank Redemption', 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.', 'Frank Darabont', 'Tim Robbins, Morgan Freeman', 1994, 'Drama', 142, FALSE),
+('The Godfather', 'An organized crime dynasty\'s aging patriarch transfers control of his clandestine empire to his reluctant son.', 'Francis Ford Coppola', 'Marlon Brando, Al Pacino', 1972, 'Crime', 175, FALSE),
+('The Dark Knight', 'When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham.', 'Christopher Nolan', 'Christian Bale, Heath Ledger', 2008, 'Action', 152, FALSE),
+('Pulp Fiction', 'The lives of two mob hitmen, a boxer, a gangster\'s wife, and a pair of diner bandits intertwine in four tales of violence and redemption.', 'Quentin Tarantino', 'John Travolta, Uma Thurman, Samuel L. Jackson', 1994, 'Crime', 154, FALSE);

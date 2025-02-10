@@ -1,6 +1,18 @@
-spring:
-  application:
-    name: VideoStreaming
+
 
 server:
   port: 8099
+
+# H2 Database Configuration
+
+spring:
+  application:
+    name: VideoStreaming
+  datasource:
+    url: jdbc:h2:mem:testdb  # In-memory database
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true  # Enable H2 console for web access

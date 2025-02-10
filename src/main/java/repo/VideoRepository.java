@@ -1,12 +1,16 @@
 package repo;
 
-import entities.Video;
+import com.VideoStreaming.entities.Video;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
-public interface VideoRepository extends JpaRepository<Video, Long> {
-    List<Video> findByIsDeletedFalse();
-    List<Video> findByDirectorContainingIgnoreCaseAndIsDeletedFalse(String director);
+@Repository
+public interface VideoRepository extends JpaRepository<Video, String> {
+
+    Optional<Video> findByTitle(String title);
+
+
 }
-

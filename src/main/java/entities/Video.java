@@ -1,27 +1,36 @@
-package entities;
+// Video Entity: Represents the video table in the database.
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+package com.VideoStreaming.entities;
+
+import jakarta.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "videos")
 public class Video {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String title;
-    private String director;
-    private String genre;
-    private int runningTime;
-    private boolean isDeleted = false;
+    private String videoId;
 
-    public Long getId() {
-        return id;
+    @Column(nullable = false)
+    private String title;
+
+    @Column(nullable = false)
+    private String description;
+
+    @Column(nullable = false)
+    private String contentType;
+
+    @Column(nullable = true)
+    private String filepath;
+
+    public String getVideoId() {
+        return videoId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setVideoId(String videoId) {
+        this.videoId = videoId;
     }
 
     public String getTitle() {
@@ -32,47 +41,38 @@ public class Video {
         this.title = title;
     }
 
-    public String getDirector() {
-        return director;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDirector(String director) {
-        this.director = director;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public String getGenre() {
-        return genre;
+    public String getContentType() {
+        return contentType;
     }
 
-    public void setGenre(String genre) {
-        this.genre = genre;
+    public void setContentType(String contentType) {
+        this.contentType = contentType;
     }
 
-    public int getRunningTime() {
-        return runningTime;
+    public String getFilepath() {
+        return filepath;
     }
 
-    public void setRunningTime(int runningTime) {
-        this.runningTime = runningTime;
-    }
-
-    public boolean isDeleted() {
-        return isDeleted;
-    }
-
-    public void setDeleted(boolean deleted) {
-        isDeleted = deleted;
+    public void setFilepath(String filepath) {
+        this.filepath = filepath;
     }
 
     @Override
     public String toString() {
         return "Video{" +
-                "id=" + id +
+                "videoId='" + videoId + '\'' +
                 ", title='" + title + '\'' +
-                ", director='" + director + '\'' +
-                ", genre='" + genre + '\'' +
-                ", runningTime=" + runningTime +
-                ", isDeleted=" + isDeleted +
+                ", description='" + description + '\'' +
+                ", contentType='" + contentType + '\'' +
+                ", filepath='" + filepath + '\'' +
                 '}';
     }
 }

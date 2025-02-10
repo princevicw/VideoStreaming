@@ -1,18 +1,26 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
 
+
+  application:
+    name: VideoStreamingService
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3307/jrtp
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+  files:
+    video=videos/
+    #show-sql: true  # Uncomment if you want to enable SQL logging
 
 server:
-  port: 8099
-
-# H2 Database Configuration
-
-spring:
-  application:
-    name: VideoStreaming
-  datasource:
-    url: jdbc:h2:mem:testdb  # In-memory database
-    driver-class-name: org.h2.Driver
-    username: sa
-    password:
-  h2:
-    console:
-      enabled: true  # Enable H2 console for web access
+  port: 8089

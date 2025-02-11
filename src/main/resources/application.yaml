@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: spring-stream-backend
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    # Uncomment the following line to show SQL in the logs
+    # show-sql: true
+
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3307/videostreaming
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  port: 8082
+  tomcat:
+    max-swallow-size: 500MB
+    max-http-request-header-size: 50KB
+
+
+
+

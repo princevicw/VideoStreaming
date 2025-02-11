@@ -21,11 +21,6 @@ public class VideoController {
     public VideoController(VideoService videoService) {
         this.videoService = videoService;
     }
-
-
-
-
-
     // Publish a new video
 
     @PostMapping("/publishVideo")

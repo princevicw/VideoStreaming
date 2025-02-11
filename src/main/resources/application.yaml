@@ -15,7 +15,7 @@ spring:
     # show-sql: true
 
   datasource:
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:3307/videostreaming
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3307/jrtp
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver

@@ -15,7 +15,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Service
-@RequiredArgsConstructor
+
 @Slf4j
 public class VideoServiceImpl implements VideoService {
 

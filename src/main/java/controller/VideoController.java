@@ -12,7 +12,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/v1/videos")
-@RequiredArgsConstructor
+
 public class VideoController {
 
     private final VideoService videoService;
